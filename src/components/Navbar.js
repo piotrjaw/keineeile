@@ -33,9 +33,14 @@ const Nav = styled.nav`
   }
 `
 
-const addActiveRouteStyle = (props) => props.to === window.location.pathname
-  ? underline
-  : ``
+const addActiveRouteStyle = (props) => {
+  let result = ''
+  try {
+    if (props.to === window.location.pathname) result = underline
+  } catch (e) {}
+
+  return result
+}
 
 const StyledLink = styled(AniLink)`
   ${addActiveRouteStyle}
