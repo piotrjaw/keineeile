@@ -21,9 +21,9 @@ const MintRect = styled.div`
   background-color: ${palette('background', 'mint')};
   bottom: 200px;
   height: 100vh;
-  left: 60vw;
+  right: -64px;
   position: absolute;
-  width: 100vw;
+  width: 36vw;
   z-index: -2;
 `
 

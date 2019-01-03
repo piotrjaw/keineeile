@@ -9,8 +9,8 @@ import { font, media, palette, underline } from '../components/common-styles'
 
 const GreyRect = styled.div`
   background-color: ${palette('background', 'lightGray')};
-  bottom: 8%;
-  height: 110%;
+  bottom: 0;
+  height: 120%;
   position: absolute;
   right: 65vw;
   width: 100vw;
@@ -21,9 +21,9 @@ const MintRect = styled.div`
   background-color: ${palette('background', 'mint')};
   bottom: 200px;
   height: 100vh;
-  left: 60vw;
+  right: -64px;
   position: absolute;
-  width: 100vw;
+  width: 35vw;
   z-index: -2;
 `
 
@@ -58,7 +58,13 @@ const StyledImage = styled(Img)`
 
   ${
     media.tablet`
-      max-width: 35vw;
+      max-width: 100vw;
+    `
+  }
+
+  ${
+    media.desktop`
+      max-width: 30vw;
       width: 100%;
     `
   }
@@ -69,8 +75,14 @@ const ContentWrapper = styled.div`
   flex-shrink: 0;
   font-size: 13px;
   line-height: 1.31;
-  max-width: 530px;
+  max-width: 100%;
   width: 100%;
+
+  ${
+    media.tablet`
+      max-width: 530px;
+    `
+  }
 `
 
 const TitleWrapper = styled.div`
@@ -78,16 +90,29 @@ const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  margin-right: 75px;
-  max-width: 567px;
+  max-width: 100%;
   width: 100%;
+
+  ${
+    media.tablet`
+      margin-right: 75px;
+      max-width: 567px;
+    `
+  }
 `
 
 const TopWrapper = styled.div`
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
+
+  ${
+    media.desktop`
+      flex-direction: row;
+    `
+  }
 `
 
 const UnderlineSpan = styled.span`
@@ -149,7 +174,7 @@ export default class AboutPage extends React.Component {
                   Swoją przygodę z językiem niemieckim zaczęłam jeszcze w liceum, gdy jego brzmienie sprawiło, że zechciałam się go nauczyć, a logiczne zasady gramatyczne i motywacja umożliwiły szybkie osiągnięcie celu. Jestem absolwentką Germanistyki na Uniwersytecie Warszawskim. Półtora roku studiów spędziłam w Niemczech, gdzie studiowałam na Uniwersytecie Kraju Saary w Saarbrücken oraz na Uniwersytecie w Wuppertal. Moje zainteresowania naukowe to kulturoznawstwo oraz językoznawstwo stosowane.
                 </p>
                 <p>
-                  Stale poszerzam swoją <UnderlineSpan>wiedzę praktyczną i teoretyczną</UnderlineSpan>, uczestnicząc w różnych <UnderlineSpan>szkoleniach z zakresu glottodydaktyki</UnderlineSpan>. Zajęcia, które prowadzę, staram się <UnderlineSpan>dostosowywać</UnderlineSpan> <UnderlineSpan>do oczekiwań i potrzeb</UnderlineSpan> kursantów, uzupełniam je również o różnorodne materiały dodatkowe. Ćwiczymy gramatykę, czytamy dodatkowe teksty oraz oglądamy filmy, aby mieć kontakt z żywym językiem.
+                  Stale poszerzam swoją <UnderlineSpan>wiedzę</UnderlineSpan> <UnderlineSpan>praktyczną</UnderlineSpan> <UnderlineSpan>i</UnderlineSpan> <UnderlineSpan>teoretyczną</UnderlineSpan>, uczestnicząc w różnych <UnderlineSpan>szkoleniach</UnderlineSpan> <UnderlineSpan>z</UnderlineSpan> <UnderlineSpan>zakresu</UnderlineSpan> <UnderlineSpan>glottodydaktyki</UnderlineSpan>. Zajęcia, które prowadzę, staram się <UnderlineSpan>dostosowywać</UnderlineSpan> <UnderlineSpan>do</UnderlineSpan> <UnderlineSpan>oczekiwań</UnderlineSpan> <UnderlineSpan>i</UnderlineSpan> <UnderlineSpan>potrzeb</UnderlineSpan> kursantów, uzupełniam je również o różnorodne materiały dodatkowe. Ćwiczymy gramatykę, czytamy dodatkowe teksty oraz oglądamy filmy, aby mieć kontakt z żywym językiem.
                 </p>
                 <p>
                   Jestem przekonana, że niemieckiego może nauczyć się każdy, a ja chętnie pomagam w osiągnięciu tego celu. Poza pracą, która jest moją pasją, sama uczę się języka obcego, tworzę pracę scrapbooking’owe, czytam książki oraz podróżuję.
@@ -158,9 +183,11 @@ export default class AboutPage extends React.Component {
             </TitleWrapper>
             <StyledImage fluid={ data.image.childImageSharp.fluid } />
           </TopWrapper>
-          <Quote>
-            Jestem przekonana, że niemieckiego może nauczyć się każdy, a ja chętnie pomagam w osiągnięciu tego celu.
-          </Quote>
+          <RenderOnSize size="tablet">
+            <Quote>
+              Jestem przekonana, że niemieckiego może nauczyć się każdy, a ja chętnie pomagam w osiągnięciu tego celu.
+            </Quote>
+          </RenderOnSize>
           <RenderOnSize size="tablet">
             <GreyRect />
           </RenderOnSize>

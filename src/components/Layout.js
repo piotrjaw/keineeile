@@ -74,7 +74,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navbar />
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <LayoutWrapper>{ children }</LayoutWrapper>
         <Footer email={ data.site.siteMetadata.email } />
         { false && <RenderOnSize
           size="desktop"

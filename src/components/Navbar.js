@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { lighten, timingFunctions } from 'polished'
 import styled from 'styled-components'
 import Icon from './Icon'
 import Logo from './Logo'
 import RenderOnSize from './RenderOnSize'
 import { lvha, media, palette, underline } from './common-styles'
+
+const DIRECTION = "up"
 
 const LogoWrapper = styled(Logo)`
   width: 180px;
@@ -35,7 +37,7 @@ const addActiveRouteStyle = (props) => props.to === window.location.pathname
   ? underline
   : ``
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(AniLink)`
   ${addActiveRouteStyle}
   ${lvha`
     color: ${palette('text')}
@@ -61,7 +63,7 @@ const StyledLink = styled(Link)`
   }
 `
 
-const LogoLink = styled(Link)`
+const LogoLink = styled(AniLink)`
   left: 3px;
   position: absolute;
   top: 3px;
@@ -186,33 +188,57 @@ const Navbar = class extends React.Component {
           size="tablet"
           up={ false }
         >
-          <LogoLink to="/" title="Logo">
+          <LogoLink
+            to="/"
+            title="Logo"
+            cover
+            direction={ DIRECTION }
+            bg={ palette('background', 'active') }
+          >
             <LogoWrapper />
           </LogoLink>
         </RenderOnSize>
         <MenuWrapper isMenuOpen={ isMenuOpen }>
           <LeftLink
             to="/"
+            cover
+            direction={ DIRECTION }
+            bg={ palette('background', 'active') }
           >
             Home
           </LeftLink>
           <LeftLink
             to="/about"
+            cover
+            direction={ DIRECTION }
+            bg={ palette('background', 'active') }
           >
             O nas
           </LeftLink>
           <RenderOnSize size="tablet">
-            <LogoLink to="/" title="Logo">
+            <LogoLink
+              to="/"
+              title="Logo"
+              cover
+              direction={ DIRECTION }
+              bg={ palette('background', 'active') }
+            >
               <LogoWrapper />
             </LogoLink>
           </RenderOnSize>
           <RightLink
             to="/companies"
+            cover
+            direction={ DIRECTION }
+            bg={ palette('background', 'active') }
           >
             Dla firm
           </RightLink>
           <RightLink
             to="/contact"
+            cover
+            direction={ DIRECTION }
+            bg={ palette('background', 'active') }
           >
             Kontakt
           </RightLink>
