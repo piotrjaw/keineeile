@@ -49,6 +49,10 @@ const StyledLink = styled(AniLink)`
     text-decoration: none;
   `}
 
+  :after {
+    opacity: 1;
+  }
+
   :hover {
     color: ${lighten(0.45, palette('text'))}
   }

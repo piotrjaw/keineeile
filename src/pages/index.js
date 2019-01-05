@@ -86,6 +86,7 @@ const TitleSpan = styled.span`
     bottom: 7px;
     height: 20px;
     left: -20px;
+    opacity: 1;
     width: calc(100% + 40px);
   }
 
