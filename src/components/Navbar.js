@@ -198,7 +198,7 @@ const Navbar = class extends React.Component {
             title="Logo"
             cover
             direction={ DIRECTION }
-            bg={ palette('background', 'active') }
+            bg={ palette('background', 'lightGray') }
           >
             <LogoWrapper />
           </LogoLink>
@@ -208,7 +208,7 @@ const Navbar = class extends React.Component {
             to="/"
             cover
             direction={ DIRECTION }
-            bg={ palette('background', 'active') }
+            bg={ palette('background', 'lightGray') }
           >
             Home
           </LeftLink>
@@ -216,7 +216,7 @@ const Navbar = class extends React.Component {
             to="/about"
             cover
             direction={ DIRECTION }
-            bg={ palette('background', 'active') }
+            bg={ palette('background', 'lightGray') }
           >
             O nas
           </LeftLink>
@@ -226,7 +226,7 @@ const Navbar = class extends React.Component {
               title="Logo"
               cover
               direction={ DIRECTION }
-              bg={ palette('background', 'active') }
+              bg={ palette('background', 'lightGray') }
             >
               <LogoWrapper />
             </LogoLink>
@@ -235,7 +235,7 @@ const Navbar = class extends React.Component {
             to="/companies"
             cover
             direction={ DIRECTION }
-            bg={ palette('background', 'active') }
+            bg={ palette('background', 'lightGray') }
           >
             Dla firm
           </RightLink>
@@ -243,7 +243,7 @@ const Navbar = class extends React.Component {
             to="/contact"
             cover
             direction={ DIRECTION }
-            bg={ palette('background', 'active') }
+            bg={ palette('background', 'lightGray') }
           >
             Kontakt
           </RightLink>

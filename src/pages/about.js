@@ -73,7 +73,7 @@ const StyledImage = styled(Img)`
 const ContentWrapper = styled.div`
   color: ${palette('text', 'gray')};
   flex-shrink: 0;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.31;
   max-width: 100%;
   width: 100%;

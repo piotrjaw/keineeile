@@ -13,7 +13,7 @@ const StyledIcon = styled(Icon)`
   }
 `
 
-const StyledAnchor = styled.a`
+const Anchor = styled.a`
   cursor: pointer;
 
   :not(:last-child) {
@@ -43,28 +43,31 @@ const SocialMediaButtons = class extends React.Component {
         vertical={ vertical }
       >
         { facebookURL &&
-          <StyledAnchor vertical={ vertical }>
+          <Anchor vertical={ vertical }>
             <StyledIcon
               name="facebook"
               size="21"
             />
-          </StyledAnchor>
+          </Anchor>
         }
         { email &&
-          <StyledAnchor vertical={ vertical }>
+          <Anchor
+            href={ `mailto:${email}` }
+            vertical={ vertical }
+          >
             <StyledIcon
               name="mail"
               size="21"
             />
-          </StyledAnchor>
+          </Anchor>
         }
         { twitterURL &&
-          <StyledAnchor vertical={ vertical }>
+          <Anchor vertical={ vertical }>
             <StyledIcon
               name="twitter"
               size="21"
             />
-          </StyledAnchor>
+          </Anchor>
         }
         { vertical && <Separator />}
       </Wrapper>

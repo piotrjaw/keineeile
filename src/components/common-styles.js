@@ -34,6 +34,7 @@ const palettes = {
     darkGray: '#555555',
     gray: '#77777e',
     lightGray: '#ecf0f0',
+    midGray: '#dddddd',
     mint: '#b4d3d3',
     teal: '#96cfcf',
     white: '#fff',
@@ -43,6 +44,7 @@ const palettes = {
     darkGray: '#555555',
     default: '#1a1a1d',
     gray: '#77777e',
+    white: '#ffffff',
   },
 }
 
@@ -73,6 +75,7 @@ export const media = Object.keys(SCREEN_WIDTHS)
       display: block;
       height: 8px;
       left: -5px;
+      opacity: .6;
       position: absolute;
       width: calc(100% + 10px);
       z-index: -1;
