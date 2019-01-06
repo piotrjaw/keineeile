@@ -144,6 +144,7 @@ const MenuWrapper = styled.div`
 `
 
 const HamburgerButton = styled.button`
+  background-color: transparent;
   border: none;
   color: ${palette('background', 'gray')};
   cursor: pointer;
