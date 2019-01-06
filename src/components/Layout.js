@@ -34,6 +34,10 @@ const GlobalStyle = createGlobalStyle`
     ${font('sans')}
     color: ${palette('text')};
   }
+
+  .tl-wrapper {
+    overflow: hidden;
+  }
 `
 
 const TemplateWrapper = ({ children }) => (
@@ -70,8 +74,8 @@ const TemplateWrapper = ({ children }) => (
 
 	        <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
-          <meta property="og:url" content="/" />
-          <meta property="og:image" content="/img/og-image.jpg" />
+          <meta property="og:url" content="http://keineeile.com" />
+          <meta property="og:image" content="/img/index.png" />
         </Helmet>
         <Navbar />
         <LayoutWrapper>{ children }</LayoutWrapper>
