@@ -487,7 +487,7 @@ export const query = graphql`
   query {
     image: file(relativePath: { eq: "contact.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
