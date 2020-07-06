@@ -93,7 +93,7 @@ const Footer = class extends React.Component {
           </RenderOnSize>
           <RightWrapper>
             <FooterText>
-              {year} © <b>KEINE EILE</b> Szkoła językowa
+              {year} © <b>KEINE EILE</b> Szkoła języka niemieckiego Warszawa
             </FooterText>
             <RenderOnSize size="phone">
               <Separator />
